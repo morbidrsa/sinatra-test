@@ -1,0 +1,13 @@
+Dockerized version of http://code.tutsplus.com/tutorials/singing-with-sinatra-the-recall-app--net-19128.
+To build the container run:
+sudo docker build -t sinatra-test .
+
+To run the app inside the container:
+sudo docker run -d -p 8080:9393 sinatra-test shotgun.ruby2.1 --host 0.0.0.0 recall.rb
+
+Point your browser to http://localhost:8080 to test it
+
+To kill it again:
+sudo docker kill $(sudo docker ps -q) 
+
+
